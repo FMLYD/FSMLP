@@ -1,6 +1,6 @@
 # FSMLP: Frequency Simplex MLP for Time Series Forecasting
 
-![FSMLP Method Overview](./figures/method.pdf)
+![FSMLP Method Overview](./method.pdf)
 
 ## Introduction
 
