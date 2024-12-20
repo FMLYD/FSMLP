@@ -30,18 +30,11 @@ class SimplexLinear(nn.Module):
 
     def forward(self, input):
         # Apply softmax to the weight along the input feature dimension
-        # weight = F.softmax(self.weight, dim=1)
-        weight=torch.log(self.weight.abs()+1)
-        # if self.input_features==self.output_features:
-        #     weight=weight+weight.T
-        # weight=F.relu(self.weight)+1
-        # weight=self.weight
-        # weight=weight*weight.detach()
-        weight=weight/weight.sum(1,keepdim=True)
-        # # weight=torch.randn(self.output_features,self.input_features).to(softmax_weight.device)
-        # weight=weight*self.var+softmax_weight
         
-        # Perform the linear transformation
+        weight=torch.log(self.weight.abs()+1)
+        
+        weight=weight/weight.sum(1,keepdim=True)
+        
         output = F.linear(input, weight, self.bias)
         return output
     def loss(self):
