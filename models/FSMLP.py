@@ -6,7 +6,7 @@ from typing import Optional
 from torch import nn
 from torch import Tensor
 import torch.nn.functional as F
-from layers.log import *
+from layers.fsmlp import *
 
 
 class Model(nn.Module):
