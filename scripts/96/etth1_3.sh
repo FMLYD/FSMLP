@@ -33,7 +33,7 @@ for f_model in 1
 do
 for dropout in     0.3
 do
-for model_name in  Log
+for model_name in  FSMLP
 # DSCNN DSCNN_fft_dct DSCNN_fft 
 do
 for pred_len in  96 
