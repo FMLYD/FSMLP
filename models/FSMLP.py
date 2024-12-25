@@ -1,4 +1,4 @@
-__all__ = ['Log']
+__all__ = ['FSMLP']
 
 # Cell
 from typing import Optional
